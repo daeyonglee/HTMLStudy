@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>신규사원 등록</title>
+<style>
+  table{
+    background-color: #F6F6F6;
+    border-spacing: 10px;
+    margin: 50px 0px 0px 50px;
+  }
+  table tr td:first-child{
+    border-bottom: 1px groove red;
+  }
+  input#send {
+    margin: 10px 0px 0px 50px;
+  }
+</style>
+</head>
+<body>
+  <form action="employee_list.html">
+    <table>
+      <tr>
+        <td>사원번호</td>
+        <td colspan="2"><input type="text" name="employee_id"></td>
+      </tr>
+      <tr>
+        <td>이름</td>
+        <td colspan="2"><input type="text" name="last_name"></td>
+      </tr>
+      <tr>
+        <td>성</td>
+        <td colspan="2"><input type="text" name="first_name"></td>
+      </tr>
+      <tr>
+        <td>이메일</td>
+        <td><input type="text" name="email_front"></td>
+        <td>@
+          <select name="email_select">
+            <option>선택하세요</option>
+            <option value="naver">naver.com</option>
+            <option value="daum">daum.net</option>
+            <option value="gmail">gmail.com</option>
+            <option value="etc">직접입력</option>
+          </select>
+          <input type="text" name="email_end" disabled="disabled">
+        </td>
+      </tr>
+      <tr>
+        <td>전화번호</td>
+        <td><input type="tel" name="phone_number"></td>
+        <td>(예 : 010-4128-3788)</td>
+      </tr>
+      <tr>
+        <td>입사일자</td>
+        <td><input type="text" name="hire_date"></td>
+        <td>(예 : 2016-09-07)</td>
+      </tr>
+      <tr>
+        <td>부서</td>
+        <td colspan="2">
+          <select>
+            <option>선택하세요</option>
+            <option>영업부</option>
+            <option>경리부</option>
+            <option>기술부</option>
+            <option>회계부</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>부서장</td>
+        <td colspan="2">
+          <select>
+            <option>선택하세요</option>
+            <option>임꺽정</option>
+            <option>홍길동</option>
+            <option>이순신</option>
+            <option>박혁거세</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>급여</td>
+        <td colspan="2">
+          <input type="text" name="salary" pattern="[0-9]">
+        </td>
+      </tr>
+    </table>
+    <input type="submit" id="send" value="전송">
+  </form>
+</body>
+</html>
